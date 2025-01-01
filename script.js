@@ -1,7 +1,7 @@
 document.getElementById('giftBox').addEventListener('click', function() {
-  document.getElementById('cakePopup').style.display = 'block';
+  document.getElementById('cakePopup').classList.add('show');
 });
 
 document.getElementById('closePopup').addEventListener('click', function() {
-  document.getElementById('cakePopup').style.display = 'none';
+  document.getElementById('cakePopup').classList.remove('show');
 });
