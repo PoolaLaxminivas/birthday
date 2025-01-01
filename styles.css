@@ -148,8 +148,8 @@ body {
   }
 
   .moving-img {
-    width: 30px; /* Smaller rotating images */
-    height: 30px;
+    width: 80px; /* Smaller rotating images */
+    height: 80px;
   }
 
   .cake-popup {
