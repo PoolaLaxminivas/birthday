@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: url('background.png') no-repeat center center fixed; /* Background GIF */
+  background: url('background1.png') no-repeat center center fixed; /* Background GIF */
   background-size: cover; /* Ensure the GIF covers the whole background */
   display: flex;
   justify-content: center;
@@ -17,7 +17,6 @@ body {
 
 .content {
   position: relative;
- /* Background GIF */
   width: 500px;
   height: 500px;
   display: flex;
