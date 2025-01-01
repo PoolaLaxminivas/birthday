@@ -50,8 +50,8 @@ body {
 
 .moving-img {
   position: absolute;
-  width: 120px; /* Reduced size for mobile */
-  height: 120px;
+  width: 40px; /* Adjust size for larger rotating images */
+  height: 40px;
   animation: moveAround 6s infinite linear;
   transform-origin: center center;
   border-radius: 50%;
@@ -93,7 +93,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  padding: 30px; /* Increased padding for mobile */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: none;
@@ -105,20 +105,20 @@ body {
 }
 
 .cake-gif {
-  width: 150px; /* Smaller for mobile */
+  width: 180px; /* Larger cake image for mobile */
   height: auto;
   margin-bottom: 20px;
 }
 
 .cake-popup p {
-  font-size: 18px; /* Adjusted for mobile */
+  font-size: 24px; /* Larger font for mobile */
   color: #ff7b7b;
   margin-bottom: 20px;
 }
 
 #closePopup {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 24px;
+  font-size: 18px; /* Larger button text */
   background-color: #ff7b7b;
   color: #fff;
   border: none;
@@ -139,32 +139,34 @@ body {
 /* Mobile-first adjustments */
 @media (max-width: 600px) {
   .content {
-    width: 250px;
-    height: 250px;
+    width: 280px; /* Slightly larger content area for mobile */
+    height: 280px;
   }
 
   .gift-img {
-    width: 100px; /* Further reduce the gift box size for small devices */
+    width: 140px; /* Slightly larger gift box for mobile */
   }
 
   .moving-img {
-    width: 120px; /* Smaller rotating images */
-    height: 120px;
+    width: 60px; /* Larger rotating images for mobile */
+    height: 60px;
   }
 
   .cake-popup {
-    padding: 15px; /* Smaller padding for mobile */
+    padding: 40px; /* Increased padding for mobile */
+    width: 80%; /* Increase popup width */
+    max-width: 400px; /* Limit max width */
   }
 
   .cake-gif {
-    width: 120px; /* Adjust cake size */
+    width: 220px; /* Larger cake gif */
   }
 
   .cake-popup p {
-    font-size: 16px; /* Reduce text size */
+    font-size: 28px; /* Larger text for the message */
   }
 
   #closePopup {
-    font-size: 14px; /* Smaller button text */
+    font-size: 20px; /* Larger button text */
   }
 }
