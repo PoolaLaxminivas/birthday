@@ -17,15 +17,13 @@ body {
 
 .content {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 300px; /* Smaller size for mobile */
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Make the content scale responsively */
   max-width: 90%;
   max-height: 90%;
-  z-index: 5;
 }
 
 .gift-box {
@@ -35,7 +33,7 @@ body {
 }
 
 .gift-img {
-  width: 180px;
+  width: 120px; /* Reduced size for mobile */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -48,13 +46,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Ensure that rotating images stay within bounds */
 }
 
 .moving-img {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 40px; /* Reduced size for mobile */
+  height: 40px;
   animation: moveAround 6s infinite linear;
   transform-origin: center center;
   border-radius: 50%;
@@ -82,27 +79,11 @@ body {
 
 @keyframes moveAround {
   0% {
-    transform: rotate(0deg) translate(200px) rotate(0deg);
+    transform: rotate(0deg) translate(150px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(200px) rotate(-360deg);
+    transform: rotate(360deg) translate(150px) rotate(-360deg);
   }
-}
-
-/* Panel near the gift box */
-.panel {
-  position: absolute;
-  top: 50%;
-  left: -100px; /* Position to the left of the gift box */
-  transform: translateY(-50%);
-  z-index: 5;
-}
-
-.panel-image {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Cake Popup */
@@ -112,7 +93,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   display: none;
@@ -124,13 +105,13 @@ body {
 }
 
 .cake-gif {
-  width: 200px;
+  width: 150px; /* Smaller for mobile */
   height: auto;
   margin-bottom: 20px;
 }
 
 .cake-popup p {
-  font-size: 24px;
+  font-size: 18px; /* Adjusted for mobile */
   color: #ff7b7b;
   margin-bottom: 20px;
 }
@@ -153,4 +134,37 @@ body {
 .cake-popup.show {
   display: block;
   opacity: 1;
+}
+
+/* Mobile-first adjustments */
+@media (max-width: 600px) {
+  .content {
+    width: 250px;
+    height: 250px;
+  }
+
+  .gift-img {
+    width: 100px; /* Further reduce the gift box size for small devices */
+  }
+
+  .moving-img {
+    width: 30px; /* Smaller rotating images */
+    height: 30px;
+  }
+
+  .cake-popup {
+    padding: 15px; /* Smaller padding for mobile */
+  }
+
+  .cake-gif {
+    width: 120px; /* Adjust cake size */
+  }
+
+  .cake-popup p {
+    font-size: 16px; /* Reduce text size */
+  }
+
+  #closePopup {
+    font-size: 14px; /* Smaller button text */
+  }
 }
