@@ -1,4 +1,4 @@
-document.getElementById('giftbox').addEventListener('click', function() {
+document.getElementById('giftBox').addEventListener('click', function() {
   document.getElementById('cakePopup').style.display = 'block';
 });
 
