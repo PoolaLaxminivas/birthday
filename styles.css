@@ -50,8 +50,8 @@ body {
 
 .moving-img {
   position: absolute;
-  width: 40px; /* Reduced size for mobile */
-  height: 40px;
+  width: 70px; /* Reduced size for mobile */
+  height: 70px;
   animation: moveAround 6s infinite linear;
   transform-origin: center center;
   border-radius: 50%;
