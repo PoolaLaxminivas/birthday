@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: url('background1.png') no-repeat center center fixed; /* Background GIF */
-  background-size: cover; /* Ensure the GIF covers the whole background */
+  background: url('background.png') no-repeat center center fixed; /* Background Image */
+  background-size: cover; /* Ensure the image covers the whole background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +22,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Make the content scale responsively */
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 5;
 }
 
 .gift-box {
@@ -44,6 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Ensure that rotating images stay within bounds */
 }
 
 .moving-img {
@@ -84,6 +89,23 @@ body {
   }
 }
 
+/* Panel near the gift box */
+.panel {
+  position: absolute;
+  top: 50%;
+  left: -100px; /* Position to the left of the gift box */
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.panel-image {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Cake Popup */
 .cake-popup {
   position: fixed;
   top: 50%;
@@ -97,6 +119,8 @@ body {
   z-index: 20;
   text-align: center;
   font-family: 'Comic Sans MS', cursive, sans-serif;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .cake-gif {
@@ -123,4 +147,10 @@ body {
 
 #closePopup:hover {
   background-color: #ff4f4f;
+}
+
+/* Smooth transition for cake popup */
+.cake-popup.show {
+  display: block;
+  opacity: 1;
 }
