@@ -17,7 +17,7 @@ body {
 
 .content {
   position: relative;
-  background: url('background1.gif') no-repeat center center fixed; /* Background GIF */
+  background: url('background1.gif') no-repeat fixed; /* Background GIF */
   width: 500px;
   height: 500px;
   display: flex;
